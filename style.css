@@ -1,0 +1,166 @@
+body{
+    background:#0f172a;
+    color:white;
+    font-family:Arial;
+}
+
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.title{
+    font-size:70px;
+    font-weight:bold;
+    color:#38bdf8;
+    text-shadow:
+    0 0 10px #38bdf8,
+    0 0 20px #38bdf8,
+    0 0 40px #38bdf8;
+}
+
+.subtitle{
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+.card{
+     background:rgba(255,255,255,0.08);
+    border:none;
+    border-radius:20px;
+    color:white;
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+textarea,
+input{
+    background:#0f172a !important;
+    color:white !important;
+    border:none !important;
+}
+
+textarea::placeholder,
+input::placeholder{
+    color:#94a3b8 !important;
+}
+
+.btn-primary{
+    background:#38bdf8;
+    border:none;
+}
+
+.btn-success{
+    background:#22c55e;
+    border:none;
+}
+body{
+    background:linear-gradient(
+        135deg,
+        #020617,
+        #0f172a,
+        #111827
+    );
+
+    background-size:400% 400%;
+
+    animation:bgMove 10s infinite;
+}
+
+@keyframes bgMove{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+
+}
+#particles-js{
+
+    position:fixed;
+
+    width:100%;
+    height:100%;
+
+    z-index:-1;
+
+    top:0;
+    left:0;
+}
+.typing{
+
+    overflow:hidden;
+
+    white-space:nowrap;
+
+    border-right:4px solid #38bdf8;
+
+    width:0;
+
+    animation:
+    typing 3s steps(20,end) forwards,
+    blink 0.7s infinite;
+}
+
+@keyframes typing{
+
+    from{
+        width:0;
+    }
+
+    to{
+        width:100%;
+    }
+
+}
+
+@keyframes blink{
+
+    50%{
+        border-color:transparent;
+    }
+
+}
+.btn{
+
+    transition:0.3s;
+
+}
+
+.btn:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:
+    0 0 15px #38bdf8;
+
+    .light-mode{
+
+    background:#f8fafc !important;
+    color:black !important;
+
+}
+
+.light-mode .result-card{
+
+    background:white !important;
+    color:black !important;
+
+}
+
+.light-mode .skill-box{
+
+    background:#e2e8f0 !important;
+    color:black !important;
+
+}
+}
