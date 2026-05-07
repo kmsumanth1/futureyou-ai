@@ -14,10 +14,10 @@ move_uploaded_file(
     "uploads/".$resumeName
 );
 
-mysqli_query($conn,
-"INSERT INTO students(name,cgpa,skills,interests,projects)
-VALUES('$name','$cgpa','$skills','$interests','$projects')"
-);
+$sql = "INSERT INTO students(name,cgpa,skills,interests,projects)
+VALUES('$name','$cgpa','$skills','$interests','$projects')";
+
+$conn->exec($sql);
 
 $career = "Software Developer";
 $match = 70;

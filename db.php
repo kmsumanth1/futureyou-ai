@@ -1,14 +1,24 @@
 <?php
 
-$conn = mysqli_connect(
-    "sql104.byetcluster.com",
-    "if0_41855175",
-    "KMsUMANTH1477",
-    "sql104.infinityfree.com"
-);
+$host = $_ENV['MYSQLHOST'];
+$dbname = $_ENV['MYSQLDATABASE'];
+$user = $_ENV['MYSQLUSER'];
+$password = $_ENV['MYSQLPASSWORD'];
 
-if(!$conn){
-    die("Connection Failed");
+try {
+
+    $conn = new PDO(
+        "mysql:host=$host;dbname=$dbname",
+        $user,
+        $password
+    );
+
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+} catch(PDOException $e) {
+
+    die("Connection failed: " . $e->getMessage());
+
 }
 
-?>  
+?>
