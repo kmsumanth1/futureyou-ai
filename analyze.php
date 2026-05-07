@@ -19,9 +19,9 @@ mysqli_query($conn,
 VALUES('$name','$cgpa','$skills','$interests','$projects')"
 );
 
-// $career = "Software Developer";
-// $match = 70;
-// $salary = "5-8 LPA";
+$career = "Software Developer";
+$match = 70;
+$salary = "5-8 LPA";
 
 $missingSkills = [
     "DSA",
